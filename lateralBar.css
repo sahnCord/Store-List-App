@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #2d2d2d;
+}
+
+.navigation {
+    position: relative;
+    height: 100%s;
+    background: #424242;
+    width: 70px;
+    box-shadow: 10px 0 0 #099c22;
+    border-left: 10px solid #424242;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.navigation:hover {
+    width: 300px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.navigation ul li a ion-icon {
+    position: relative;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navigation ul li a .icon ion-icon {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+
+}
+
+.navigation ul li.active {
+    background: #099c22;
+}
+
+.navigation ul li.active a::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #099c22;
+}
+
+.navigation ul li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #099c22;
+}
+
+/*-----------------------------------------------------------*/
+
+.search {
+    position: absolute;
+    height: 45px;
+    width: 650px;
+    top: 30px;
+    left: 120px;
+    background: #424242;
+    z-index: 1;
+    box-shadow: 10px 10px 10px #c00606;
+    border-left: 10px solid #c00606;
+    border-radius: 5px;
+}
+
+.search .search-outline {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    text-align: left;
+    line-height: 55px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.search .search-outline ion-icon {
+    position: relative;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.search #S123 {
+    position: relative;
+    height: 28px;
+    width: 500px;
+    left: -15px;
+    top: 8px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+}
+
+/*-----------------------------------------------------------*/
+
+.theme-switch-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 1280px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    width: 80px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 30px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 30px;
+}
+
+input:checked+.slider {
+    background-color: #424242;
+}
+
+input:checked+.slider:before {
+    transform: translateX(40px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #424242;
+    --font-color: #fff;
+    --blockList-color: #292922;
+}
+
+[light-theme="light"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #161625;
+    --bg-color: #161625;
+    --blockList-color: #818cab;
+}
+
+/*-----------------------------------------------------------*/
+
+.blockList {
+    position: absolute;
+    height: 420px;
+    width: 880px;
+    top: 180px;
+    left: 120px;
+    background: #424242;
+    z-index: 1;
+    border-radius: 20px;
+    border: 4px dashed #666565;
+}
+
+.blockList .empty-space {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    top: 80px;
+    left: 280px;
+    text-align: center;
+    line-height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.blockList .empty-space ion-icon {
+    position: relative;
+    font-size: 9rem;
+    color: #332f2f;
+}
+
+.blockList .empty-message {
+    position: relative;
+    height: 28px;
+    width: 500px;
+    left: 0px;
+    top: 140px;
+    color: #332f2f;
+    font-weight: 800;
+}
+
+/*-----------------------------------------------------------*/
+.addlist-listarea {
+    position: absolute;
+    min-height: 160px;
+    min-width: 200px;
+    top: 440px;
+    left: 1150px;
+    background: transparent;
+    display: inline-block;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.addlist-listarea ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding-left: 5px;
+    padding-right: 8px;
+    border-radius: 10px;
+    background: #707070;
+}
+
+.addlist-listarea ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+
+.addlist-listarea ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.addlist-listarea ul li a .icon-shopping {
+    position: relative;
+    display: block;
+    height: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.addlist-listarea ul li a ion-icon {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.addlist-listarea ul li a .span-shopping {
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-left: 1px;
+    height: 20px;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+.addlist-type::after {
+    content: "";
+    position: absolute;
+    top: 62px;
+    right: 20px;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #707070;
+    z-index: -10;
+}
+
+.addlist-type-devisor {
+    position: relative;
+    font-size: 0;
+    width: 190px;
+    top: 2.5px;
+}
+
+.addList {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    left: 130px;
+    top: 100px;
+    background: #424242;
+    z-index: 1;
+    border-radius: 50%;
+    border: 2px solid #707070;
+    z-index: 10;
+
+}
+
+.addList a .close-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    left: 2px;
+    top: 1px;
+}
+
+.addList a .close-button ion-icon {
+    position: relative;
+    font-size: 3.3rem;
+    color: #e2e2e2;
+    transition: 0.5s;
+
+}
+
+.addList a .close-button ion-icon:hover {
+    transform: rotate(45deg);
+}
+
+/*-----------------------------------------------------------*/
+
+.STORELIST {
+    position: absolute;
+    height: 47.5px;
+    width: 270px;
+    top: 105px;
+    left: 120px;
+    background: #424242;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #099c22;
+    border-left: 10px solid #099c22;
+
+}
+
+.STORELIST .cart-outline {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    text-align: left;
+    line-height: 55px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.STORELIST .cart-outline ion-icon {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    top: 5px;
+    left: 0px;
+}
+
+.STORELIST .H1TITLE #Title1 {
+    position: relative;
+    height: 48px;
+    width: 500px;
+    left: 55px;
+    top: -36px;
+    background: transparent;
+    border: 1;
+    color: rgb(243, 243, 243);
+}
+
+/*-----------------------------------------------------------*/

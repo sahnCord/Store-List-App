@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store_List</title>
+    <link rel="stylesheet" href="lateralBar.css">
+
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="square-outline"></ion-icon>
+                    </span>
+                    <span class="title">To Do</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="checkbox-outline"></ion-icon>
+                    </span>
+                    <span class="title">Done</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="search">
+        <span class="search-outline">
+            <ion-icon name="search-outline"></ion-icon>
+        </span>
+        <span class="input">
+            <input type="text" name="Search" id="S123" placeholder="Bananas to tuesday...">
+        </span>
+    </div>
+    <div class="blockList">
+        <span class="empty-space"><ion-icon name="cube-outline"></ion-icon></span>
+        <span class="empty-message">There is nothin here for a while...</span>
+    </div>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+      </label>
+        <!--<span class="light-mode">
+            <ion-icon name="sunny-outline"></ion-icon>
+        </span>
+        <span class="night-mode">
+            <ion-icon name="moon-outline"></ion-icon>
+        </span> -->
+    </div>
+
+    <div class="STORELIST">
+        <span class="cart-outline">
+            <ion-icon name="cart-outline"></ion-icon>
+        </span>
+        <span class="H1TITLE">
+            <h1 id="Title1"><i>Store List</i></h1>
+        </span>
+    </div>
+
+    <div class="addlist-listarea">
+        <div class="addList">
+            <a href="#">
+                <span class="close-button">
+                    <ion-icon name="add-outline"></ion-icon>
+                </span>
+            </a>
+        </div>
+        <ul class="addlist-type">
+            <li class="addlist-li-fastshop">
+                <a href="/StoreList/store-files/store-fast-shop.html" class="link-fastshop">
+                    <span class="icon-shopping">
+                        <ion-icon name="pricetag-outline"></ion-icon>
+                    </span>
+                    <span class="span-shopping">
+                        Fast-Shop
+                    </span>
+                </a>
+            </li>
+            <hr class="addlist-type-devisor">
+            <li class="addlist-li-shopping">
+                <a href="/StoreList/store-files/store-shopping.html" class="link-shopping">
+                    <span class="icon-shopping">
+                        <ion-icon name="pricetags-outline"></ion-icon>
+                    </span>
+                    <span class="span-shopping">
+                        Shopping
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="interaction.js"></script>
+    <script src="/StoreList/JSCODE.js"></script>
+</body>
+
+</html>
