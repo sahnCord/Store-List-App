@@ -13,7 +13,7 @@ let determineUrgencyLevel = function () {
     let But3 = document.getElementById(`Level3`);
 
     let choseBox = null
-
+    
     if (But1.checked) {
         But2.checked = false
         But3.checked = false
