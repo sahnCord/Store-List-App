@@ -54,3 +54,37 @@ body {
     width: 100%;
     display:block;
 }
+
+/*------------------------------------------------------------*/
+
+.main-section li .item-place-1 {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-section li .item-place-1 .board-place {
+    position: relative;
+    text-align: left;
+    top: 5px;
+    height: 100px;
+    width: 500px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+.main-section li .item-place-1 .put-item-data{
+    font-size: 0.79rem;
+    text-align: left;
+}
+
+.main-section li .item-place-1 .board-place .span-list{
+    text-align: left;
+    position: relative;
+    color:#2d2d2d;
+    font-size: 0.8rem;
+}

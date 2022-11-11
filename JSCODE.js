@@ -5,6 +5,7 @@ let shopItems; // Create a function to get all items, pricces and amount.
 
 //-------------------------------------------------------------------------
 
+const receivePlaceCheck = document.querySelector(".receive-place-check");
 const buttonsSection = document.querySelector(".buttons-section");
 let determineUrgencyLevel = function () {
 
@@ -33,31 +34,27 @@ let determineUrgencyLevel = function () {
     if (choseBox.value) return choseBox.value
     
 }
+let determineReceivePlace = function () {
 
-buttonsSection.addEventListener("click", determineUrgencyLevel)
-let Ulevel = determineUrgencyLevel();
-
-//-------------------------------------------------------------------------
-
-const receivePlaceCheck = document.querySelector(".receive-place-check");
-const determineReceivePlace = function () {
-
-    let Home = document.getElementById("Home");
-    let Local = document.getElementById("Local");
+    let localHome = document.getElementById("Home11");
+    let localLocal = document.getElementById("Local11");
     let choseBox = null;
 
-    if (Home.checked) {
-        Local.checked = false
-        choseBox = Home
+    if (localHome.checked) {
+        localLocal.checked = false
+        choseBox = localHome
     }
-    if (Local.checked) {
-        Home.checked = false
-        choseBox = Local
+    if (localLocal.checked) {
+        localHome.checked = false
+        choseBox = localLocal
     }
-
-    console.log(choseBox.value)
 
     if (choseBox.value) return choseBox.value
 }
-receivePlaceCheck.addEventListener('click', determineReceivePlace);
-let receivePlace = receivePlaceCheck();
+
+buttonsSection.addEventListener("click", determineUrgencyLevel);
+receivePlaceCheck.addEventListener("click", determineReceivePlace);
+let Ulevel = determineUrgencyLevel();
+let receivePlace = determineReceivePlace();
+
+//-------------------------------------------------------------------------

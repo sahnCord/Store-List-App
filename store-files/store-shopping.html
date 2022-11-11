@@ -34,21 +34,44 @@
                 <input type="text" id="local-shopping">
             </li>
             <li class="items-place">
-                <section class="item-place-#1">
+                <section class="item-place-1">
                     <div class="board">
                         <span class="icon">
                             <ion-icon name="list-outline"></ion-icon>
                         </span>
-                        ...
+                        <span class="add-your-items-here">
+                            Add Your Items Here!
+                        </span>
+                    <div class="board-place">
+                        <!--
+                            This idv will display the items list, with prices, amounts and names.
+                            This information will be shown as spans.
+                            The one above will be just an exanple.
+                        -->
+                        <span class="span-list">2 Bananas($2,00 each)</span>
+                        <span class="span-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus veritatis odio nulla aperiam laudantium facilis odit laborum nam recusandae mollitia, illum eius tempore nihil, ullam inventore quia esse.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, voluptatem voluptate quod, recusandae enim ratione modi iste laudantium molestiae voluptatum pariatur sed saepe fuga. Beatae commodi magni ipsam.
+                        </span>
                     </div>
-                    <div class="put-item-data">
-                        <span>Item</span>
-                        <input type="text" id="put-item-shopping">
-                        <span>Value($):</span>
-                        <input type="number" id="put-item-price">
-                        <button>Add Item</button>
-                        <button>Remove Last Item</button>
                     </div>
+                    <ul class="put-item-data">
+                        <li>
+                            <span>Item</span>
+                            <input type="text" id="put-item-shopping">
+                        </li>
+                        <li>
+                            <span>Value($):</span>
+                            <input type="dola" id="put-item-price">
+                        </li>
+                        <li>
+                            <span>Amount:</span>
+                            <input type="number" id="put-item-amount">
+                        </li>
+                        <li>
+                            <button>Add Item</button>
+                            <button>Remove Last Item</button>
+                        </li>
+                    </ul>
                 </section>
             </li>
             <li class="urgency-level">
@@ -64,8 +87,8 @@
                 <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
                 <span class="receive-place-span">Where will I receive my shopping?</span>
                 <div class="receive-place-check">
-                    <input type="checkbox" id="Local" value="local">At the local
-                    <input type="checkbox" id="Home" value="home">At Home
+                    <input type="checkbox" id="Local11" value="local">At the local
+                    <input type="checkbox" id="Home11" value="home">At Home
                 </div>
             </li>
             <div class="add-or-cancel">
