@@ -75,17 +75,18 @@ let createSpan = function () {
 
     let ItemOBJ = createItemList();
 
-    newSpan = window.document.createElement("span");
+    let newSpan;
+    newSpan = document.createElement("span");
     newSpan.className = "span-list";
 
-    text = document.createTextNode("")
-    newSpan.appendChild(text)
+    let text = document.createTextNode("");
+    newSpan.appendChild(text);
 
     if (shopItemsData.length > 0) {
         newSpan.innerHTML = `, (${ItemOBJ.amount})${ItemOBJ.item}(${ItemOBJ.price})`
     } else {
         newSpan.innerHTML = `(${ItemOBJ.amount})${ItemOBJ.item}(${ItemOBJ.price})`
-    }
+    };
 
     shopItemsData.push([ItemOBJ, newSpan]);
 
@@ -134,3 +135,4 @@ receivePlaceCheck.addEventListener("click", determineReceivePlace);
 //-------------------------------------------------------------------------
 
 const StoreListObject = CreateMainOBJ(); // The OBJ that will be exported
+
